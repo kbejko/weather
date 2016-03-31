@@ -1,15 +1,15 @@
-$dirty-green: #8aa399; //rgba(138, 163, 153, 100)
-$violet: #7d84b2; //rgba(125, 132, 178, 100)
-$light-violet: #8fa6cb; //rgba(143, 166, 203, 100)
-$sun: #dbf4a7; //rgba(219, 244, 167, 100)
-$light-green: #d5f9de; //rgba(213, 249, 222, 100)
+$dirty-green: #8aa399; /*rgba(138, 163, 153, 100)*/
+$violet: #7d84b2; /*rgba(125, 132, 178, 100)*/
+$light-violet: #8fa6cb; /*rgba(143, 166, 203, 100)*/
+$sun: #dbf4a7; /*rgba(219, 244, 167, 100)*/
+$light-green: #d5f9de; /*rgba(213, 249, 222, 100)*/
 @mixin icons($url) {
   background: $url;
   background-repeat: no-repeat;
   height: 4em;
   width: 4em;
   background-size: cover;
-  // padding-bottom: 10%;
+  /* padding-bottom: 10%;*/
 }
 body {
   font-family: 'Poiret One', cursive;
@@ -26,15 +26,19 @@ body {
 }
 .container__sunny,
 .container__hazy {
+  background: -webkit-linear-gradient(45deg, rgba(252,234,187,1) 0%, rgba(251,223,147,1) 20%, rgba(252,205,77,1) 41%, rgba(248,181,0,1) 96%, rgba(248,181,0,1) 100%);
   background: linear-gradient(45deg, rgba(252,234,187,1) 0%, rgba(251,223,147,1) 20%, rgba(252,205,77,1) 41%, rgba(248,181,0,1) 96%, rgba(248,181,0,1) 100%);
 }
 .container__clear{
+  background: -webkit-linear-gradient(45deg, rgba(199,222,244,1) 27%, rgba(199,222,244,1) 48%, rgba(199,222,244,1) 58%, rgba(161,176,221,1) 82%, rgba(161,176,221,1) 91%, rgba(161,176,221,1) 100%);
   background: linear-gradient(45deg, rgba(199,222,244,1) 27%, rgba(199,222,244,1) 48%, rgba(199,222,244,1) 58%, rgba(161,176,221,1) 82%, rgba(161,176,221,1) 91%, rgba(161,176,221,1) 100%);
 }
 .container__cloudy {
+  background: -webkit-linear-gradient(45deg, rgba(202,207,211,1) 0%, rgba(202,207,211,1) 2%, rgba(189,198,209,1) 33%, rgba(187,191,195,1) 45%, rgba(158,163,169,1) 95%, rgba(158,163,169,1) 100%);
   background: linear-gradient(45deg, rgba(202,207,211,1) 0%, rgba(202,207,211,1) 2%, rgba(189,198,209,1) 33%, rgba(187,191,195,1) 45%, rgba(158,163,169,1) 95%, rgba(158,163,169,1) 100%);
 }
 .container__partlycloudy {
+  background: -webkit-linear-gradient(45deg, rgba(202,207,211,1) 0%, rgba(202,207,211,1) 2%, rgba(189,198,209,1) 33%, rgba(187,191,195,1) 45%, rgba(202,218,239,1) 95%, rgba(202,218,239,1) 100%);
   background: linear-gradient(45deg, rgba(202,207,211,1) 0%, rgba(202,207,211,1) 2%, rgba(189,198,209,1) 33%, rgba(187,191,195,1) 45%, rgba(202,218,239,1) 95%, rgba(202,218,239,1) 100%);
 }
 .weather {
@@ -44,18 +48,35 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 80%;
   .weather__current {
     font-size: 2em;
     padding: 1em;
     width: 65%;
     .weather__current--conditions {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      align-items: center;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
       h2 {
         font-size: 2em;
       }
@@ -63,12 +84,25 @@ body {
   }
   .weather__forecast {
     width: 65%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     .weather__forecast--conditions {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
-      flex-flow: column;
-      align-items: center;
+      -webkit-flex-flow: column;
+          -ms-flex-flow: column;
+              flex-flow: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
       font-size: 1.5em;
     }
     .weather__forecast--templow {
@@ -153,14 +187,22 @@ footer {
     bottom: 0;
     font-size: .6em;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
 }
 
 
 
-// Animations
+/* Animations*/
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 @keyframes spin {
   100% {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }

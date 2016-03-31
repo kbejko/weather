@@ -1,3 +1,8 @@
+/*rgba(138, 163, 153, 100)*/
+/*rgba(125, 132, 178, 100)*/
+/*rgba(143, 166, 203, 100)*/
+/*rgba(219, 244, 167, 100)*/
+/*rgba(213, 249, 222, 100)*/
 body {
   font-family: 'Poiret One', cursive;
   font-size: 20px; }
@@ -13,15 +18,19 @@ body {
 
 .container__sunny,
 .container__hazy {
+  background: -webkit-linear-gradient(45deg, #fceabb 0%, #fbdf93 20%, #fccd4d 41%, #f8b500 96%, #f8b500 100%);
   background: linear-gradient(45deg, #fceabb 0%, #fbdf93 20%, #fccd4d 41%, #f8b500 96%, #f8b500 100%); }
 
 .container__clear {
+  background: -webkit-linear-gradient(45deg, #c7def4 27%, #c7def4 48%, #c7def4 58%, #a1b0dd 82%, #a1b0dd 91%, #a1b0dd 100%);
   background: linear-gradient(45deg, #c7def4 27%, #c7def4 48%, #c7def4 58%, #a1b0dd 82%, #a1b0dd 91%, #a1b0dd 100%); }
 
 .container__cloudy {
+  background: -webkit-linear-gradient(45deg, #cacfd3 0%, #cacfd3 2%, #bdc6d1 33%, #bbbfc3 45%, #9ea3a9 95%, #9ea3a9 100%);
   background: linear-gradient(45deg, #cacfd3 0%, #cacfd3 2%, #bdc6d1 33%, #bbbfc3 45%, #9ea3a9 95%, #9ea3a9 100%); }
 
 .container__partlycloudy {
+  background: -webkit-linear-gradient(45deg, #cacfd3 0%, #cacfd3 2%, #bdc6d1 33%, #bbbfc3 45%, #cadaef 95%, #cadaef 100%);
   background: linear-gradient(45deg, #cacfd3 0%, #cacfd3 2%, #bdc6d1 33%, #bbbfc3 45%, #cadaef 95%, #cadaef 100%); }
 
 .weather {
@@ -31,9 +40,20 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
   align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
   width: 80%; }
   .weather .weather__current {
@@ -41,17 +61,36 @@ body {
     padding: 1em;
     width: 65%; }
     .weather .weather__current .weather__current--conditions {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
       align-items: center; }
       .weather .weather__current .weather__current--conditions h2 {
         font-size: 2em; }
   .weather .weather__forecast {
     width: 65%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
     justify-content: space-around; }
     .weather .weather__forecast .weather__forecast--conditions {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-flex-flow: column;
+      -ms-flex-flow: column;
       flex-flow: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
       align-items: center;
       font-size: 1.5em; }
     .weather .weather__forecast .weather__forecast--templow {
@@ -95,13 +134,15 @@ body {
     background-repeat: no-repeat;
     height: 4em;
     width: 4em;
-    background-size: cover; }
+    background-size: cover;
+    /* padding-bottom: 10%;*/ }
   .weather .cloudy {
     background: url(assets/icons/cloudy.svg);
     background-repeat: no-repeat;
     height: 4em;
     width: 4em;
-    background-size: cover; }
+    background-size: cover;
+    /* padding-bottom: 10%;*/ }
   .weather .mostlycloudy,
   .weather .mostlysunny,
   .weather .partlycloudy,
@@ -110,7 +151,8 @@ body {
     background-repeat: no-repeat;
     height: 4em;
     width: 4em;
-    background-size: cover; }
+    background-size: cover;
+    /* padding-bottom: 10%;*/ }
   .weather .chancetstorms,
   .weather .thunderstorm,
   .weather .tstorms {
@@ -118,14 +160,16 @@ body {
     background-repeat: no-repeat;
     height: 4em;
     width: 4em;
-    background-size: cover; }
+    background-size: cover;
+    /* padding-bottom: 10%;*/ }
   .weather .rain,
   .weather .chancerain {
     background: url(assets/icons/rain.svg);
     background-repeat: no-repeat;
     height: 4em;
     width: 4em;
-    background-size: cover; }
+    background-size: cover;
+    /* padding-bottom: 10%;*/ }
   .weather .snow,
   .weather .sleet,
   .weather .flurries,
@@ -136,17 +180,25 @@ body {
     background-repeat: no-repeat;
     height: 4em;
     width: 4em;
-    background-size: cover; }
+    background-size: cover;
+    /* padding-bottom: 10%;*/ }
 
 footer {
   position: absolute;
   bottom: 0;
   font-size: .6em;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%); }
 
+/* Animations*/
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 @keyframes spin {
   100% {
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
 /*# sourceMappingURL=style.css.map */
