@@ -33,7 +33,8 @@ body {
   background: -webkit-linear-gradient(45deg, rgba(199,222,244,1) 27%, rgba(199,222,244,1) 48%, rgba(199,222,244,1) 58%, rgba(161,176,221,1) 82%, rgba(161,176,221,1) 91%, rgba(161,176,221,1) 100%);
   background: linear-gradient(45deg, rgba(199,222,244,1) 27%, rgba(199,222,244,1) 48%, rgba(199,222,244,1) 58%, rgba(161,176,221,1) 82%, rgba(161,176,221,1) 91%, rgba(161,176,221,1) 100%);
 }
-.container__cloudy {
+.container__cloudy,
+.container__mostlycloudy {
   background: -webkit-linear-gradient(45deg, rgba(202,207,211,1) 0%, rgba(202,207,211,1) 2%, rgba(189,198,209,1) 33%, rgba(187,191,195,1) 45%, rgba(158,163,169,1) 95%, rgba(158,163,169,1) 100%);
   background: linear-gradient(45deg, rgba(202,207,211,1) 0%, rgba(202,207,211,1) 2%, rgba(189,198,209,1) 33%, rgba(187,191,195,1) 45%, rgba(158,163,169,1) 95%, rgba(158,163,169,1) 100%);
 }
