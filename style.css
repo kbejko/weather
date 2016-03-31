@@ -25,7 +25,8 @@ body {
   background: -webkit-linear-gradient(45deg, #c7def4 27%, #c7def4 48%, #c7def4 58%, #a1b0dd 82%, #a1b0dd 91%, #a1b0dd 100%);
   background: linear-gradient(45deg, #c7def4 27%, #c7def4 48%, #c7def4 58%, #a1b0dd 82%, #a1b0dd 91%, #a1b0dd 100%); }
 
-.container__cloudy {
+.container__cloudy,
+.container__mostlycloudy {
   background: -webkit-linear-gradient(45deg, #cacfd3 0%, #cacfd3 2%, #bdc6d1 33%, #bbbfc3 45%, #9ea3a9 95%, #9ea3a9 100%);
   background: linear-gradient(45deg, #cacfd3 0%, #cacfd3 2%, #bdc6d1 33%, #bbbfc3 45%, #9ea3a9 95%, #9ea3a9 100%); }
 
