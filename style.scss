@@ -1,0 +1,166 @@
+$dirty-green: #8aa399; //rgba(138, 163, 153, 100)
+$violet: #7d84b2; //rgba(125, 132, 178, 100)
+$light-violet: #8fa6cb; //rgba(143, 166, 203, 100)
+$sun: #dbf4a7; //rgba(219, 244, 167, 100)
+$light-green: #d5f9de; //rgba(213, 249, 222, 100)
+@mixin icons($url) {
+  background: $url;
+  background-repeat: no-repeat;
+  height: 4em;
+  width: 4em;
+  background-size: cover;
+  // padding-bottom: 10%;
+}
+body {
+  font-family: 'Poiret One', cursive;
+  font-size: 20px;
+}
+.container {
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  line-height: 1.5;
+  letter-spacing: .25em;
+}
+.container__sunny,
+.container__hazy {
+  background: linear-gradient(45deg, rgba(252,234,187,1) 0%, rgba(251,223,147,1) 20%, rgba(252,205,77,1) 41%, rgba(248,181,0,1) 96%, rgba(248,181,0,1) 100%);
+}
+.container__clear{
+  background: linear-gradient(45deg, rgba(199,222,244,1) 27%, rgba(199,222,244,1) 48%, rgba(199,222,244,1) 58%, rgba(161,176,221,1) 82%, rgba(161,176,221,1) 91%, rgba(161,176,221,1) 100%);
+}
+.container__cloudy {
+  background: linear-gradient(45deg, rgba(202,207,211,1) 0%, rgba(202,207,211,1) 2%, rgba(189,198,209,1) 33%, rgba(187,191,195,1) 45%, rgba(158,163,169,1) 95%, rgba(158,163,169,1) 100%);
+}
+.container__partlycloudy {
+  background: linear-gradient(45deg, rgba(202,207,211,1) 0%, rgba(202,207,211,1) 2%, rgba(189,198,209,1) 33%, rgba(187,191,195,1) 45%, rgba(202,218,239,1) 95%, rgba(202,218,239,1) 100%);
+}
+.weather {
+  box-shadow: 0 0 1em rgba(0,0,0,.14),0 1em 2em rgba(0,0,0,.28);
+  background: #fff;
+  padding: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 80%;
+  .weather__current {
+    font-size: 2em;
+    padding: 1em;
+    width: 65%;
+    .weather__current--conditions {
+      display: flex;
+      align-items: center;
+      h2 {
+        font-size: 2em;
+      }
+    }
+  }
+  .weather__forecast {
+    width: 65%;
+    display: flex;
+    justify-content: space-around;
+    .weather__forecast--conditions {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      font-size: 1.5em;
+    }
+    .weather__forecast--templow {
+      font-size: .7em;
+    }
+  }
+  .weather__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .weather__image--partlycloudy,
+  .weather__image--cloudy,
+  .weather__image--partlysunny,
+  .weather__image--mostlycloudy,
+  .weather__image--mostlysunny {
+    background-image: url(assets/images/windy.jpg);
+  }
+  .weather__image--clear,
+  .weather__image--hazy,
+  .weather__image--sunny {
+    background-image: url(assets/images/sunny.jpg);
+  }
+  .weather__image--chancetstorms,
+  .weather__image--thunderstorm,
+  .weather__image--tstorms,
+  .weather__image--rain,
+  .weather__image--chancerain {
+    background-image: url(assets/images/rainy.jpg);
+  }
+  .weather__image--snow,
+  .weather__image--sleet,
+  .weather__image--flurries,
+  .weather__image--chancesnow,
+  .weather__image--chancesleet,
+  .weather__image--chanceflurries {
+    background-image: url(assets/images/snow.jpg);
+  }
+
+
+  .clear,
+  .hazy,
+  .sunny, {
+    @include icons(url(assets/icons/sunny.svg));
+  }
+
+  .cloudy {
+    @include icons(url(assets/icons/cloudy.svg));
+  }
+  .mostlycloudy,
+  .mostlysunny,
+  .partlycloudy,
+  .partlysunny {
+    @include icons(url(assets/icons/partly-sunny.svg));
+  }
+  .chancetstorms,
+  .thunderstorm,
+  .tstorms {
+    @include icons(url(assets/icons/thunderstorm.svg));
+  }
+  .rain,
+  .chancerain {
+    @include icons(url(assets/icons/rain.svg));
+  }
+  .snow,
+  .sleet,
+  .flurries,
+  .chancesnow,
+  .chancesleet,
+  .chanceflurries {
+    @include icons(url(assets/icons/snow.svg));
+  }
+}
+
+footer {
+  position: absolute;
+    bottom: 0;
+    font-size: .6em;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+// Animations
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

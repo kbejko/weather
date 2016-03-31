@@ -1,0 +1,152 @@
+body {
+  font-family: 'Poiret One', cursive;
+  font-size: 20px; }
+
+.container {
+  width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  line-height: 1.5;
+  letter-spacing: .25em; }
+
+.container__sunny,
+.container__hazy {
+  background: linear-gradient(45deg, #fceabb 0%, #fbdf93 20%, #fccd4d 41%, #f8b500 96%, #f8b500 100%); }
+
+.container__clear {
+  background: linear-gradient(45deg, #c7def4 27%, #c7def4 48%, #c7def4 58%, #a1b0dd 82%, #a1b0dd 91%, #a1b0dd 100%); }
+
+.container__cloudy {
+  background: linear-gradient(45deg, #cacfd3 0%, #cacfd3 2%, #bdc6d1 33%, #bbbfc3 45%, #9ea3a9 95%, #9ea3a9 100%); }
+
+.container__partlycloudy {
+  background: linear-gradient(45deg, #cacfd3 0%, #cacfd3 2%, #bdc6d1 33%, #bbbfc3 45%, #cadaef 95%, #cadaef 100%); }
+
+.weather {
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.14), 0 1em 2em rgba(0, 0, 0, 0.28);
+  background: #fff;
+  padding: 1em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 80%; }
+  .weather .weather__current {
+    font-size: 2em;
+    padding: 1em;
+    width: 65%; }
+    .weather .weather__current .weather__current--conditions {
+      display: flex;
+      align-items: center; }
+      .weather .weather__current .weather__current--conditions h2 {
+        font-size: 2em; }
+  .weather .weather__forecast {
+    width: 65%;
+    display: flex;
+    justify-content: space-around; }
+    .weather .weather__forecast .weather__forecast--conditions {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      font-size: 1.5em; }
+    .weather .weather__forecast .weather__forecast--templow {
+      font-size: .7em; }
+  .weather .weather__image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0; }
+  .weather .weather__image--partlycloudy,
+  .weather .weather__image--cloudy,
+  .weather .weather__image--partlysunny,
+  .weather .weather__image--mostlycloudy,
+  .weather .weather__image--mostlysunny {
+    background-image: url(assets/images/windy.jpg); }
+  .weather .weather__image--clear,
+  .weather .weather__image--hazy,
+  .weather .weather__image--sunny {
+    background-image: url(assets/images/sunny.jpg); }
+  .weather .weather__image--chancetstorms,
+  .weather .weather__image--thunderstorm,
+  .weather .weather__image--tstorms,
+  .weather .weather__image--rain,
+  .weather .weather__image--chancerain {
+    background-image: url(assets/images/rainy.jpg); }
+  .weather .weather__image--snow,
+  .weather .weather__image--sleet,
+  .weather .weather__image--flurries,
+  .weather .weather__image--chancesnow,
+  .weather .weather__image--chancesleet,
+  .weather .weather__image--chanceflurries {
+    background-image: url(assets/images/snow.jpg); }
+  .weather .clear,
+  .weather .hazy,
+  .weather .sunny {
+    background: url(assets/icons/sunny.svg);
+    background-repeat: no-repeat;
+    height: 4em;
+    width: 4em;
+    background-size: cover; }
+  .weather .cloudy {
+    background: url(assets/icons/cloudy.svg);
+    background-repeat: no-repeat;
+    height: 4em;
+    width: 4em;
+    background-size: cover; }
+  .weather .mostlycloudy,
+  .weather .mostlysunny,
+  .weather .partlycloudy,
+  .weather .partlysunny {
+    background: url(assets/icons/partly-sunny.svg);
+    background-repeat: no-repeat;
+    height: 4em;
+    width: 4em;
+    background-size: cover; }
+  .weather .chancetstorms,
+  .weather .thunderstorm,
+  .weather .tstorms {
+    background: url(assets/icons/thunderstorm.svg);
+    background-repeat: no-repeat;
+    height: 4em;
+    width: 4em;
+    background-size: cover; }
+  .weather .rain,
+  .weather .chancerain {
+    background: url(assets/icons/rain.svg);
+    background-repeat: no-repeat;
+    height: 4em;
+    width: 4em;
+    background-size: cover; }
+  .weather .snow,
+  .weather .sleet,
+  .weather .flurries,
+  .weather .chancesnow,
+  .weather .chancesleet,
+  .weather .chanceflurries {
+    background: url(assets/icons/snow.svg);
+    background-repeat: no-repeat;
+    height: 4em;
+    width: 4em;
+    background-size: cover; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  font-size: .6em;
+  left: 50%;
+  transform: translateX(-50%); }
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg); } }
+
+/*# sourceMappingURL=style.css.map */
