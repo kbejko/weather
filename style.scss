@@ -1,16 +1,11 @@
-$dirty-green: #8aa399; /*rgba(138, 163, 153, 100)*/
-$violet: #7d84b2; /*rgba(125, 132, 178, 100)*/
-$light-violet: #8fa6cb; /*rgba(143, 166, 203, 100)*/
-$sun: #dbf4a7; /*rgba(219, 244, 167, 100)*/
-$light-green: #d5f9de; /*rgba(213, 249, 222, 100)*/
 @mixin icons($url) {
   background: $url;
   background-repeat: no-repeat;
   height: 4em;
   width: 4em;
   background-size: cover;
-  /* padding-bottom: 10%;*/
 }
+
 body {
   font-family: 'Poiret One', cursive;
   font-size: 20px;
@@ -67,7 +62,7 @@ body {
   width: 80%;
   .weather__current {
     font-size: 2em;
-    padding: 1em;
+    padding: 2rem;
     width: 65%;
     .weather__current--conditions {
       display: -webkit-box;
@@ -89,9 +84,10 @@ body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     .weather__forecast--conditions {
       display: -webkit-box;
       display: -webkit-flex;
@@ -148,7 +144,6 @@ body {
     background-image: url(assets/images/snow.jpg);
   }
 
-
   .clear,
   .hazy,
   .sunny, {
@@ -180,6 +175,9 @@ body {
   .chancesleet,
   .chanceflurries {
     @include icons(url(assets/icons/snow.svg));
+  }
+  .windy {
+    @include icons(url(assets/icons/windy.svg));
   }
 }
 

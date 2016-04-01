@@ -1,8 +1,3 @@
-/*rgba(138, 163, 153, 100)*/
-/*rgba(125, 132, 178, 100)*/
-/*rgba(143, 166, 203, 100)*/
-/*rgba(219, 244, 167, 100)*/
-/*rgba(213, 249, 222, 100)*/
 body {
   font-family: 'Poiret One', cursive;
   font-size: 20px; }
@@ -59,7 +54,7 @@ body {
   width: 80%; }
   .weather .weather__current {
     font-size: 2em;
-    padding: 1em;
+    padding: 2rem;
     width: 65%; }
     .weather .weather__current .weather__current--conditions {
       display: -webkit-box;
@@ -78,9 +73,10 @@ body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-justify-content: space-around;
-    -ms-flex-pack: distribute;
-    justify-content: space-around; }
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
     .weather .weather__forecast .weather__forecast--conditions {
       display: -webkit-box;
       display: -webkit-flex;
@@ -135,15 +131,13 @@ body {
     background-repeat: no-repeat;
     height: 4em;
     width: 4em;
-    background-size: cover;
-    /* padding-bottom: 10%;*/ }
+    background-size: cover; }
   .weather .cloudy {
     background: url(assets/icons/cloudy.svg);
     background-repeat: no-repeat;
     height: 4em;
     width: 4em;
-    background-size: cover;
-    /* padding-bottom: 10%;*/ }
+    background-size: cover; }
   .weather .mostlycloudy,
   .weather .mostlysunny,
   .weather .partlycloudy,
@@ -152,8 +146,7 @@ body {
     background-repeat: no-repeat;
     height: 4em;
     width: 4em;
-    background-size: cover;
-    /* padding-bottom: 10%;*/ }
+    background-size: cover; }
   .weather .chancetstorms,
   .weather .thunderstorm,
   .weather .tstorms {
@@ -161,16 +154,14 @@ body {
     background-repeat: no-repeat;
     height: 4em;
     width: 4em;
-    background-size: cover;
-    /* padding-bottom: 10%;*/ }
+    background-size: cover; }
   .weather .rain,
   .weather .chancerain {
     background: url(assets/icons/rain.svg);
     background-repeat: no-repeat;
     height: 4em;
     width: 4em;
-    background-size: cover;
-    /* padding-bottom: 10%;*/ }
+    background-size: cover; }
   .weather .snow,
   .weather .sleet,
   .weather .flurries,
@@ -181,8 +172,13 @@ body {
     background-repeat: no-repeat;
     height: 4em;
     width: 4em;
-    background-size: cover;
-    /* padding-bottom: 10%;*/ }
+    background-size: cover; }
+  .weather .windy {
+    background: url(assets/icons/windy.svg);
+    background-repeat: no-repeat;
+    height: 4em;
+    width: 4em;
+    background-size: cover; }
 
 footer {
   position: absolute;
