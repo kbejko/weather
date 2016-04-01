@@ -126,7 +126,8 @@ body {
     background-image: url(assets/images/snow.jpg); }
   .weather .clear,
   .weather .hazy,
-  .weather .sunny {
+  .weather .sunny,
+  .weather .mostlysunny {
     background: url(assets/icons/sunny.svg);
     background-repeat: no-repeat;
     height: 4em;
@@ -138,8 +139,12 @@ body {
     height: 4em;
     width: 4em;
     background-size: cover; }
-  .weather .mostlycloudy,
-  .weather .mostlysunny,
+  .weather .mostlycloudy {
+    background: url(assets/icons/mostly-cloudy.svg);
+    background-repeat: no-repeat;
+    height: 4em;
+    width: 4em;
+    background-size: cover; }
   .weather .partlycloudy,
   .weather .partlysunny {
     background: url(assets/icons/partly-sunny.svg);
@@ -182,20 +187,10 @@ body {
 
 footer {
   position: absolute;
-  bottom: 0;
+  bottom: 1%;
   font-size: .6em;
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%); }
-
-/* Animations*/
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); } }
 
 /*# sourceMappingURL=style.css.map */

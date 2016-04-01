@@ -146,15 +146,16 @@ body {
 
   .clear,
   .hazy,
-  .sunny, {
+  .sunny,
+  .mostlysunny {
     @include icons(url(assets/icons/sunny.svg));
   }
-
   .cloudy {
     @include icons(url(assets/icons/cloudy.svg));
   }
-  .mostlycloudy,
-  .mostlysunny,
+  .mostlycloudy {
+    @include icons(url(assets/icons/mostly-cloudy.svg));
+  }
   .partlycloudy,
   .partlysunny {
     @include icons(url(assets/icons/partly-sunny.svg));
@@ -183,25 +184,9 @@ body {
 
 footer {
   position: absolute;
-    bottom: 0;
+    bottom: 1%;
     font-size: .6em;
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-}
-
-
-
-/* Animations*/
-@-webkit-keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-@keyframes spin {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
 }
