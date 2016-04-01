@@ -29,11 +29,11 @@
     }
     #circle {
       fill: yellow;
-      opacity: .7;
+      opacity: .9;
     }
     #cloud {
       fill: silver;
-      opacity: .3;
+      opacity: .4;
     }
     ]]>
   </style>

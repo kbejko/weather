@@ -24,7 +24,7 @@ $(document).ready(function(){
     }
 
     //Catchall for illustration to be cold lady no matter if it's snowing
-    if (currentWeatherTemp < 40) {
+    if (currentWeatherTemp < 32) {
       $('.weather__image').addClass('weather__image--snow')
     }
   }).fail(function(err){
