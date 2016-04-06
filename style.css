@@ -2,6 +2,9 @@ body {
   font-family: 'Poiret One', cursive;
   font-size: 20px; }
 
+a {
+  text-decoration: none; }
+
 .container {
   width: 100%;
   min-height: 100%;
@@ -21,11 +24,24 @@ body {
   background: linear-gradient(45deg, #c7def4 27%, #c7def4 48%, #c7def4 58%, #a1b0dd 82%, #a1b0dd 91%, #a1b0dd 100%); }
 
 .container__cloudy,
-.container__mostlycloudy {
+.container__mostlycloudy,
+.container__chancetstorms,
+.container__thunderstorm,
+.container__tstorms,
+.conatiner__rain,
+.conatiner__chancerain,
+.conatiner__snow,
+.container__sleet,
+.container__flurries,
+.container__chancesnow,
+.conainter__chancesleet,
+.conatiner__chanceflurries,
+.container__windy {
   background: -webkit-linear-gradient(45deg, #cacfd3 0%, #cacfd3 2%, #bdc6d1 33%, #bbbfc3 45%, #9ea3a9 95%, #9ea3a9 100%);
   background: linear-gradient(45deg, #cacfd3 0%, #cacfd3 2%, #bdc6d1 33%, #bbbfc3 45%, #9ea3a9 95%, #9ea3a9 100%); }
 
-.container__partlycloudy {
+.container__partlycloudy,
+.container__mostlysunny {
   background: -webkit-linear-gradient(45deg, #cacfd3 0%, #cacfd3 2%, #bdc6d1 33%, #bbbfc3 45%, #cadaef 95%, #cadaef 100%);
   background: linear-gradient(45deg, #cacfd3 0%, #cacfd3 2%, #bdc6d1 33%, #bbbfc3 45%, #cadaef 95%, #cadaef 100%); }
 
@@ -51,7 +67,8 @@ body {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 80%; }
+  min-width: 80%;
+  max-height: 80%; }
   .weather .weather__current {
     font-size: 2em;
     padding: 2rem;
@@ -184,13 +201,12 @@ body {
     height: 4em;
     width: 4em;
     background-size: cover; }
-
-footer {
-  position: absolute;
-  bottom: 1%;
-  font-size: .6em;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%); }
+  .weather footer {
+    position: absolute;
+    top: 100%;
+    font-size: .8em;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%); }
 
 /*# sourceMappingURL=style.css.map */

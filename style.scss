@@ -10,6 +10,9 @@ body {
   font-family: 'Poiret One', cursive;
   font-size: 20px;
 }
+a {
+  text-decoration: none;
+}
 .container {
   width: 100%;
   min-height: 100%;
@@ -28,12 +31,26 @@ body {
   background: -webkit-linear-gradient(45deg, rgba(199,222,244,1) 27%, rgba(199,222,244,1) 48%, rgba(199,222,244,1) 58%, rgba(161,176,221,1) 82%, rgba(161,176,221,1) 91%, rgba(161,176,221,1) 100%);
   background: linear-gradient(45deg, rgba(199,222,244,1) 27%, rgba(199,222,244,1) 48%, rgba(199,222,244,1) 58%, rgba(161,176,221,1) 82%, rgba(161,176,221,1) 91%, rgba(161,176,221,1) 100%);
 }
+
 .container__cloudy,
-.container__mostlycloudy {
+.container__mostlycloudy,
+.container__chancetstorms,
+.container__thunderstorm,
+.container__tstorms,
+.conatiner__rain,
+.conatiner__chancerain,
+.conatiner__snow,
+.container__sleet,
+.container__flurries,
+.container__chancesnow,
+.conainter__chancesleet,
+.conatiner__chanceflurries,
+.container__windy {
   background: -webkit-linear-gradient(45deg, rgba(202,207,211,1) 0%, rgba(202,207,211,1) 2%, rgba(189,198,209,1) 33%, rgba(187,191,195,1) 45%, rgba(158,163,169,1) 95%, rgba(158,163,169,1) 100%);
   background: linear-gradient(45deg, rgba(202,207,211,1) 0%, rgba(202,207,211,1) 2%, rgba(189,198,209,1) 33%, rgba(187,191,195,1) 45%, rgba(158,163,169,1) 95%, rgba(158,163,169,1) 100%);
 }
-.container__partlycloudy {
+.container__partlycloudy,
+.container__mostlysunny {
   background: -webkit-linear-gradient(45deg, rgba(202,207,211,1) 0%, rgba(202,207,211,1) 2%, rgba(189,198,209,1) 33%, rgba(187,191,195,1) 45%, rgba(202,218,239,1) 95%, rgba(202,218,239,1) 100%);
   background: linear-gradient(45deg, rgba(202,207,211,1) 0%, rgba(202,207,211,1) 2%, rgba(189,198,209,1) 33%, rgba(187,191,195,1) 45%, rgba(202,218,239,1) 95%, rgba(202,218,239,1) 100%);
 }
@@ -59,7 +76,8 @@ body {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 80%;
+  min-width: 80%;
+  max-height: 80%;
   .weather__current {
     font-size: 2em;
     padding: 2rem;
@@ -77,6 +95,9 @@ body {
         font-size: 2em;
       }
     }
+    // #plus {
+    //   cursor: pointer;
+    // }
   }
   .weather__forecast {
     width: 65%;
@@ -106,6 +127,56 @@ body {
       font-size: .7em;
     }
   }
+
+  // #plus {
+  //   position: absolute;
+  //   left: 65%;
+  //   font-size: 4em;
+  // }
+  // .weather__forecast--thorough {
+  //   box-sizing: border-box;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   background: black;
+  //   opacity: 0;
+  //   height: 100%;
+  //   padding: 1em;
+  //   display: flex;
+  //   flex-flow: column;
+  //   justify-content: space-around;
+  //   color: white;
+  //   width: 70%;
+  //   transition: opacity 2s;
+  //   z-index: 1;
+  //   &::after{
+  //     content: "\00D7";
+  //     position: absolute;
+  //     top: 0;
+  //     right: .5em;
+  //     cursor: pointer;
+  //     font-size: 3em;
+  //     z-index: 1;
+  //   }
+  //
+  //   h1 {
+  //     font-size: 2em;
+  //   }
+  // }
+  // .show-thorough {
+  //   opacity: 1;
+  //   // left: 65%;
+  //   z-index: 2;
+  //   left: 100px;
+  //   &::after {
+  //     content: "\00D7";
+  //     position: absolute;
+  //     top: 0;
+  //     right: .5em;
+  //     cursor: pointer;
+  //     font-size: 3em;
+  //   }
+  // }
   .weather__image {
     background-position: center;
     background-repeat: no-repeat;
@@ -141,7 +212,7 @@ body {
   .weather__image--chancesnow,
   .weather__image--chancesleet,
   .weather__image--chanceflurries {
-    background-image: url(assets/images/snow.jpg);
+    background-image: url(assets/cold.svg);
   }
 
   .clear,
@@ -180,13 +251,13 @@ body {
   .windy {
     @include icons(url(assets/icons/windy.svg));
   }
-}
 
-footer {
-  position: absolute;
-    bottom: 1%;
-    font-size: .6em;
+  footer {
+    position: absolute;
+    top: 100%;
+    font-size: .8em;
     left: 50%;
     -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
 }

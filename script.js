@@ -52,9 +52,21 @@ $(document).ready(function(){
     var weatherForecastTempLow = '<li class="weather__forecast--templow">' + forecastWeatherTempLow + '</li>'
     $('.weather__forecast').append('<ul class="weather__forecast--conditions">' + weatherForecastDay +  weatherForecastIcon + weatherForecastTempHigh + weatherForecastTempLow + '</ul>')
   }
+  // 
+  // // Thorough forecast overlay
+  // for (var i = 0; i < response.forecast.txt_forecast.forecastday.length; i += 2) {
+  //   var forecastWeatherTitle = response.forecast.txt_forecast.forecastday[i].title
+  //   var forecastText = response.forecast.txt_forecast.forecastday[i].fcttext
+  //   $('.weather__forecast--thorough').append('<div><h1>' + forecastWeatherTitle + '</h1><p>' + forecastText +'</p></div>')
+  // }
+  //
+  // $('#plus').on('click', function(){
+  //   console.log('hello')
+  //   $('.weather__forecast--thorough').toggleClass('show-thorough')
+  // })
 }).fail(function(err){
     console.log('Error: ' + err.status)
   }).success(function(){
-    console.log()
+    console.log('Hi')
   })
 });
