@@ -95,9 +95,9 @@ a {
         font-size: 2em;
       }
     }
-    // #plus {
-    //   cursor: pointer;
-    // }
+    /* #plus {*/
+    /*   cursor: pointer;*/
+    /* }*/
   }
   .weather__forecast {
     width: 65%;
@@ -128,55 +128,55 @@ a {
     }
   }
 
-  // #plus {
-  //   position: absolute;
-  //   left: 65%;
-  //   font-size: 4em;
-  // }
-  // .weather__forecast--thorough {
-  //   box-sizing: border-box;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   background: black;
-  //   opacity: 0;
-  //   height: 100%;
-  //   padding: 1em;
-  //   display: flex;
-  //   flex-flow: column;
-  //   justify-content: space-around;
-  //   color: white;
-  //   width: 70%;
-  //   transition: opacity 2s;
-  //   z-index: 1;
-  //   &::after{
-  //     content: "\00D7";
-  //     position: absolute;
-  //     top: 0;
-  //     right: .5em;
-  //     cursor: pointer;
-  //     font-size: 3em;
-  //     z-index: 1;
-  //   }
-  //
-  //   h1 {
-  //     font-size: 2em;
-  //   }
-  // }
-  // .show-thorough {
-  //   opacity: 1;
-  //   // left: 65%;
-  //   z-index: 2;
-  //   left: 100px;
-  //   &::after {
-  //     content: "\00D7";
-  //     position: absolute;
-  //     top: 0;
-  //     right: .5em;
-  //     cursor: pointer;
-  //     font-size: 3em;
-  //   }
-  // }
+  /* #plus {*/
+  /*   position: absolute;*/
+  /*   left: 65%;*/
+  /*   font-size: 4em;*/
+  /* }*/
+  /* .weather__forecast--thorough {*/
+  /*   box-sizing: border-box;*/
+  /*   position: absolute;*/
+  /*   top: 0;*/
+  /*   left: 0;*/
+  /*   background: black;*/
+  /*   opacity: 0;*/
+  /*   height: 100%;*/
+  /*   padding: 1em;*/
+  /*   display: flex;*/
+  /*   flex-flow: column;*/
+  /*   justify-content: space-around;*/
+  /*   color: white;*/
+  /*   width: 70%;*/
+  /*   transition: opacity 2s;*/
+  /*   z-index: 1;*/
+  /*   &::after{*/
+  /*     content: "\00D7";*/
+  /*     position: absolute;*/
+  /*     top: 0;*/
+  /*     right: .5em;*/
+  /*     cursor: pointer;*/
+  /*     font-size: 3em;*/
+  /*     z-index: 1;*/
+  /*   }*/
+  /**/
+  /*   h1 {*/
+  /*     font-size: 2em;*/
+  /*   }*/
+  /* }*/
+  /* .show-thorough {*/
+  /*   opacity: 1;*/
+  /*   // left: 65%;*/
+  /*   z-index: 2;*/
+  /*   left: 100px;*/
+  /*   &::after {*/
+  /*     content: "\00D7";*/
+  /*     position: absolute;*/
+  /*     top: 0;*/
+  /*     right: .5em;*/
+  /*     cursor: pointer;*/
+  /*     font-size: 3em;*/
+  /*   }*/
+  /* }*/
   .weather__image {
     background-position: center;
     background-repeat: no-repeat;
