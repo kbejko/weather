@@ -31,7 +31,7 @@ $(document).ready(function(){
     console.log('Error: ' + err.status)
     $('.weather').append('<h1>The storm must have knocked down the server ¯\\_(ツ)_/¯ </h1>')
   }).success(function(){
-    console.log('Greeeeeaaaaat, it like waaaahrked wowarked woorked')
+    console.log('It worked!')
   })
 
   //Forecast API
@@ -52,7 +52,7 @@ $(document).ready(function(){
     var weatherForecastTempLow = '<li class="weather__forecast--templow">' + forecastWeatherTempLow + '</li>'
     $('.weather__forecast').append('<ul class="weather__forecast--conditions">' + weatherForecastDay +  weatherForecastIcon + weatherForecastTempHigh + weatherForecastTempLow + '</ul>')
   }
-  // 
+  //
   // // Thorough forecast overlay
   // for (var i = 0; i < response.forecast.txt_forecast.forecastday.length; i += 2) {
   //   var forecastWeatherTitle = response.forecast.txt_forecast.forecastday[i].title
@@ -67,6 +67,6 @@ $(document).ready(function(){
 }).fail(function(err){
     console.log('Error: ' + err.status)
   }).success(function(){
-    console.log('Hi')
+    console.log('This part also worked!')
   })
 });
